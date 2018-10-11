@@ -44,7 +44,7 @@
                     $role = 'Admin';
                 ?>
                 
-                <td> {{ $role }} </td>
+                <td> {{ $role  }} </td>
                 <td> {{ $user->created_at->diffForHumans() }} </td>
                 <td> <input type="button" value="Change Password" /> </td>
             </tr>
