@@ -1,6 +1,4 @@
-
-
-  <div id="wrapper" class="animate">
+ <div id="wrapper" class="animate">
     <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
       
       <a class="navbar-brand" href="/">Portfolio</a>
@@ -15,10 +13,17 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          @if($user = Auth::user())
+          @if($user = Auth::user() )
+          @if (auth()->user()->isAdmin == 0)
           <li class="nav-item">
             <a class="nav-link" href="/shares">My Portfolio</a>
           </li>
+          @endif
+           @if(auth()->user()->isAdmin == 1)
+           <li class="nav-item">
+            <a class="nav-link" href="/admin/dashboard">Admin's Dashboard</a>
+          </li>
+           @endif
         </ul>
         <ul class="navbar-nav ml-md-auto d-md-flex">
           
