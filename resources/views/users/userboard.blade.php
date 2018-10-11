@@ -42,9 +42,6 @@
            
     </div>
     <hr>
-    <div class='right'>
-        <a href='/'> <h3> Back  </h3></a>
-    </div>
     
 </body>
 </html>
